@@ -21,15 +21,14 @@ Singleton {
   Process {
     id: setWallpaperProc
     running: false
-    command: ["hyprctl", "hyprpaper", "wallpaper", `,${wallpaperPath}`]
   }
+
 
   function setWallpaper(fullPath: string) {
     currentpaper.setText(fullPath)
   }
   function updateWallpaper() {
     currentpaper.waitForJob()
-    setWallpaperProc.command = ["hyprctl", "hyprpaper", "wallpaper", `,${wallpaperPath}`]
-    setWallpaperProc.running = true
+    setWallpaperProc.exec(["hyprctl", "hyprpaper", "wallpaper", `,${wallpaperPath}`])
   }
 }
