@@ -29,6 +29,9 @@ Singleton {
   }
   function updateWallpaper() {
     currentpaper.waitForJob()
-    setWallpaperProc.exec(["hyprctl", "hyprpaper", "wallpaper", `,${wallpaperPath}`])
+    overrideWallpaper(wallpaperPath)
+  }
+  function overrideWallpaper(fullPath: string) {
+    setWallpaperProc.exec(["hyprctl", "hyprpaper", "wallpaper", `,${fullPath}`])
   }
 }

@@ -58,10 +58,17 @@ PopupWindow {
                 MouseArea {
                     anchors.fill: parent
                     cursorShape: Qt.PointingHandCursor
+                    hoverEnabled: true
 
                     onClicked: {
                       Wallpaper.setWallpaper(filePath)
                       picker.visible = false
+                    }
+                    onEntered: {
+                      Wallpaper.overrideWallpaper(filePath)
+                    }
+                    onExited: {
+                      Wallpaper.updateWallpaper()
                     }
                 }
             }
