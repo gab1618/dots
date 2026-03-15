@@ -13,7 +13,7 @@ PanelWindow {
 
   FolderListModel {
     id: folderModel
-    folder: Qt.resolvedUrl("assets/pkmns")
+    folder: Qt.resolvedUrl(`${Quickshell.shellDir}/assets/pkmns`)
     showDirs: false
   }
   property var imageRadius: 12

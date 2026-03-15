@@ -27,7 +27,7 @@ PopupWindow {
 
     FolderListModel {
       id: folderModel
-      folder: Qt.resolvedUrl("../../assets/wallpapers")
+      folder: Qt.resolvedUrl(`${Quickshell.shellDir}/assets/wallpapers`)
       showDirs: false
     }
 
