@@ -16,8 +16,8 @@ PopupWindow {
 
     visible: false
 
-    width: 600
-    height: 400
+    implicitWidth: 600
+    implicitHeight: 400
     color: "#00000000"
 
     Process {
