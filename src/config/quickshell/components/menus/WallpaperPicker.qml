@@ -3,9 +3,11 @@ import QtQuick.Layouts
 import QtQuick.Controls
 import Quickshell
 import Qt.labs.folderlistmodel
-import qs.config
 import Quickshell.Hyprland
 import Quickshell.Io
+
+import qs.config
+import qs.services
 
 PopupWindow {
     id: picker
@@ -19,11 +21,6 @@ PopupWindow {
     implicitWidth: 600
     implicitHeight: 400
     color: "#00000000"
-
-    Process {
-      id: setWallpaperProc
-      running: false
-    }
 
     FolderListModel {
       id: folderModel
@@ -63,9 +60,7 @@ PopupWindow {
                     cursorShape: Qt.PointingHandCursor
 
                     onClicked: {
-                      setWallpaperProc.command = ["hyprctl", "hyprpaper", "wallpaper", `,${filePath}`]
-                      setWallpaperProc.running = true
-
+                      Wallpaper.setWallpaper(filePath)
                       picker.visible = false
                     }
                 }
