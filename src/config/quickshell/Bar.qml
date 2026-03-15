@@ -28,6 +28,8 @@ PanelWindow {
     anchors.leftMargin: 6
     anchors.rightMargin: 6
 
+    MenuToggle {}
+
     Workspaces {}
   }
 

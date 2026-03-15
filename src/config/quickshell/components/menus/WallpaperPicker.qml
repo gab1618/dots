@@ -11,10 +11,10 @@ PopupWindow {
     id: picker
 
     anchor.window: bar
-    anchor.rect.x: parentWindow.width - width
+    anchor.rect.x: 4
     anchor.rect.y: parentWindow.height
 
-    visible: true
+    visible: false
 
     width: 600
     height: 400
@@ -27,7 +27,7 @@ PopupWindow {
 
     FolderListModel {
       id: folderModel
-      folder: Qt.resolvedUrl("assets/wallpapers")
+      folder: Qt.resolvedUrl("../../assets/wallpapers")
       showDirs: false
     }
 
