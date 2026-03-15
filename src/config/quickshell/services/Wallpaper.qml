@@ -16,6 +16,7 @@ Singleton {
     }
   }
 
+  property var overwritten: currentpaper.text()
   readonly property var wallpaperPath: currentpaper.text()
 
   Process {
@@ -32,6 +33,8 @@ Singleton {
     overrideWallpaper(wallpaperPath)
   }
   function overrideWallpaper(fullPath: string) {
+    if(fullPath == overwritten) return
+    overwritten = fullPath
     setWallpaperProc.exec(["hyprctl", "hyprpaper", "wallpaper", `,${fullPath}`])
   }
 }
