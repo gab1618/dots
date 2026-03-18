@@ -17,7 +17,7 @@ Rectangle {
 
   SystemClock {
     id: clockservice
-    precision: SystemClock.Minutes
+    precision: SystemClock.Seconds
   }
 
   Label {
