@@ -1,6 +1,7 @@
 import QtQuick
 import QtQuick.Controls
 import QtQuick.Layouts
+import Quickshell
 
 import qs.config
 
@@ -14,14 +15,15 @@ Rectangle {
 
   radius: height / 2
 
-  function clockContent() {
-    return Qt.formatDateTime(new Date(), "  dd ddd 󰅐 HH:mm")
+  SystemClock {
+    id: clockservice
+    precision: SystemClock.Minutes
   }
 
   Label {
     id: clock
 
-    text: clockContent()
+    text: Qt.formatDateTime(clockservice.date, "  dd ddd 󰅐 HH:mm")
     anchors.top: parent.top
     anchors.bottom: parent.bottom
 
@@ -34,12 +36,6 @@ Rectangle {
       family: bar.fontFamily;
       pixelSize: bar.fontSize;
       weight: 500;
-    }
-    Timer {
-      interval: 1000
-      running: true
-      repeat: true
-      onTriggered: clock.text = clockContent()
     }
   }
 }
