@@ -5,6 +5,7 @@ import Quickshell
 import Qt.labs.folderlistmodel
 import Quickshell.Hyprland
 import Quickshell.Io
+import Quickshell.Widgets
 
 import qs.config
 import qs.services
@@ -12,14 +13,22 @@ import qs.services
 PopupWindow {
   id: picker
 
+  readonly property var colsCount: 2
+  readonly property var imageWidth: 220
+  readonly property var imageHeight: 120
+  readonly property var gridHSpacing: 20
+  readonly property var gridVSpacing: 20
+  readonly property var contentPadding: 12
+
   anchor.window: bar
   anchor.rect.x: 4
   anchor.rect.y: parentWindow.height
 
   visible: false
 
-  implicitWidth: 600
+  implicitWidth: (contentPadding * 2) + colsCount * (imageWidth + gridHSpacing)
   implicitHeight: 400
+
   color: "#00000000"
 
   FolderListModel {
@@ -30,45 +39,59 @@ PopupWindow {
 
   Rectangle {
     anchors.fill: parent
-    radius: 10
+    radius: 12
     color: "#1e1e2e"
 
     GridView {
       id: grid
       anchors.fill: parent
-      anchors.margins: 12
+      anchors.margins: contentPadding
 
-      cellWidth: 180
-      cellHeight: 110
+      cellWidth: imageWidth + gridHSpacing
+      cellHeight: imageHeight + gridVSpacing
 
       model: folderModel
 
-      delegate: Rectangle {
-        width: 160
-        height: 90
-        radius: 6
+      delegate: RowLayout {
+        width: grid.cellWidth
+        height: grid.cellHeight
         clip: true
+        Layout.alignment: Qt.AlignHCenter
 
-        Image {
-          anchors.fill: parent
-          source: "file://" + filePath
-          fillMode: Image.PreserveAspectCrop
-        }
+        Rectangle {
+          width: imageWidth
+          height: imageHeight
+          color: "#00000000"
 
-        MouseArea {
-          anchors.fill: parent
-          cursorShape: Qt.PointingHandCursor
-          hoverEnabled: true
+          Layout.leftMargin: gridHSpacing / 2
+          Layout.rightMargin: gridHSpacing / 2
 
-          onClicked: {
-            Wallpaper.setWallpaper(filePath)
-            picker.visible = false
+          ClippingWrapperRectangle {
+            radius: 12
+            anchors.fill: parent
+
+            Image {
+              anchors.fill: parent
+              source: "file://" + filePath
+              fillMode: Image.PreserveAspectCrop
+            }
           }
-          onEntered: {
-            Wallpaper.overrideWallpaper(filePath)
-          }
-          onExited: {
-            Wallpaper.updateWallpaper()
+
+          MouseArea {
+            anchors.fill: parent
+            cursorShape: Qt.PointingHandCursor
+            hoverEnabled: true
+
+            onClicked: {
+              Wallpaper.setWallpaper(filePath)
+              picker.visible = false
+            }
+            onEntered: {
+              Wallpaper.overrideWallpaper(filePath)
+            }
+            onExited: {
+              Wallpaper.updateWallpaper()
+            }
           }
         }
       }
