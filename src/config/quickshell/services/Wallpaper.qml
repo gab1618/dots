@@ -16,7 +16,7 @@ Singleton {
     }
   }
 
-  property var overwritten: currentpaper.text()
+  property var overwritten: ""
   readonly property var wallpaperPath: currentpaper.text()
 
   Process {
