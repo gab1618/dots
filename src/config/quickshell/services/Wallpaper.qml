@@ -7,7 +7,7 @@ import QtQuick
 Singleton {
   FileView {
     id: currentpaper
-    path: Qt.resolvedUrl(`${Quickshell.shellDir}/.state/current-wallpaper`)
+    path: Qt.resolvedUrl(`${Quickshell.stateDir}/current-wallpaper`)
     watchChanges: true
     blockLoading: true
 
@@ -31,6 +31,7 @@ Singleton {
   function updateWallpaper() {
     currentpaper.waitForJob()
     overrideWallpaper(wallpaperPath)
+    setWallpaperProc.exec(["wal", "-i", wallpaperPath])
   }
   function overrideWallpaper(fullPath: string) {
     if(fullPath == overwritten) return

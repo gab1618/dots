@@ -5,13 +5,14 @@ import QtQuick.Controls
 import QtQuick
 
 import qs.config
+import qs.services
 
 Rectangle {
   id: workspaces
   readonly property var hPadding: 4
   readonly property var vPadding: 4
 
-  color: Theme.base1
+  color: Wal.bg
   radius: height / 2
 
   Layout.fillHeight: true
@@ -60,7 +61,7 @@ Rectangle {
         }
 
         background: Rectangle {
-          color: (isActive || isHovered) ? Theme.mauve : Theme.base1
+          color: (isActive || isHovered) ? Wal.color7 : Wal.bg
           radius: height / 2
           Layout.fillHeight: true
           Layout.fillWidth: true
