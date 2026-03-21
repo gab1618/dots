@@ -7,7 +7,7 @@ import QtQuick
 Singleton {
   FileView {
     id: currentpaper
-    path: Qt.resolvedUrl(`${Quickshell.shellDir}/.state/current-wallpaper`)
+    path: Qt.resolvedUrl(Quickshell.statePath("current-wallpaper"))
     watchChanges: true
     blockLoading: true
 
