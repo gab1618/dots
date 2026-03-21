@@ -127,8 +127,8 @@ Rectangle {
 
       verticalAlignment: Text.AlignVCenter
 
-      leftPadding: buttonsPadding
-      rightPadding: buttonsPadding
+      leftPadding: 12
+      rightPadding: 12
 
       font {
         weight: 700;
