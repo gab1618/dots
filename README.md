@@ -2,6 +2,8 @@
 
 Feel free to copy them, just keep in mind it won't just work out of the box.
 
+Tip: use stow to install the dots
+
 ## Dependencies
 
 * FiraCode Nerd Font
