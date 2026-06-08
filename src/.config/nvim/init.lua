@@ -1,4 +1,5 @@
 require("config.lazy")
 require("config.filetype")
+require("config.harpoon")
 require("mappings")
 require("options")
