@@ -7,4 +7,11 @@ return {
     {"<leader>fw", "<cmd>Telescope grep_string<cr>", desc = "Grep string"},
     {"<leader>fb", "<cmd>Telescope buffers<cr>", desc = "Search buffers"},
   },
+  opts = {
+    pickers = {
+      find_files = {
+        hidden = true,
+      },
+    },
+  },
 }
