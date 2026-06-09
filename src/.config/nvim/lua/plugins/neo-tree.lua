@@ -10,4 +10,11 @@ return {
   keys = {
     { "<C-n>", "<cmd> Neotree toggle reveal <cr>" }
   },
+  opts = {
+    filesystem = {
+      filtered_items = {
+        hide_dotfiles = false,
+      },
+    }
+  }
 }
