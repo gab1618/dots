@@ -7,6 +7,7 @@ vim.g.autoformat = true
 vim.g.snacks_animate = true
 
 vim.g.root_spec = { "lsp", { ".git", "lua" }, "cwd" }
+vim.opt.relativenumber = true
 
 vim.g.deprecation_warnings = false
 
