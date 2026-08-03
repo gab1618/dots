@@ -5,4 +5,3 @@ require("confs.env")
 require("confs.monitors")
 require("confs.input")
 require("confs/windows")
-
