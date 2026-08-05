@@ -8,6 +8,7 @@ hl.bind(vars.main_mod .. " + SPACE", hl.dsp.exec_cmd(vars.apps_menu))
 hl.bind(vars.main_mod .. " + D", hl.dsp.exec_cmd(vars.menu))
 hl.bind(vars.main_mod .. " + V", hl.dsp.window.float({ action = "toggle" }))
 hl.bind(vars.main_mod .. " + P", hl.dsp.window.pseudo())
+hl.bind(vars.main_mod .. " + F",  hl.dsp.window.fullscreen({ mode = "fullscreen", action = "toggle" }))
 
 hl.bind(vars.main_mod .. " + l",  hl.dsp.focus({ direction = "left" }))
 hl.bind(vars.main_mod .. " + h", hl.dsp.focus({ direction = "right" }))
