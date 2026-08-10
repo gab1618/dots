@@ -12,6 +12,7 @@ Tip: use stow to install the dots
 * zsh + oh-my-zsh + powerlevel10k
 * Tmux + tpm
 * Hyprland, Hyprlock, Hypridle, Hyprpaper
+* Waybar
 * Walker + Elephant
 * Quickshell
 * Grim, slurp, wl-clipboard
