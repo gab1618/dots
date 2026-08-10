@@ -7,13 +7,13 @@
   "modules-left": [
     "hyprland/workspaces"
   ],
-  "modules-center": [],
+  "modules-center": [
+    "mpris"
+  ],
   "modules-right": [
-    "mpris",
-    "cpu",
-    "network",
     "pulseaudio",
     "tray",
+    "battery",
     "clock"
   ],
   "hyprland/workspaces": {

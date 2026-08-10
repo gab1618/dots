@@ -64,6 +64,7 @@ window#waybar {
 #battery,
 #network,
 #clock,
+#battery
 #tray,
 #cpu,
 #pulseaudio {
