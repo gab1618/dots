@@ -2,6 +2,6 @@ local vars = require("confs.vars")
 
 hl.on("hyprland.start", function ()
   hl.exec_cmd(vars.terminal)
-  hl.exec_cmd("qs & hypridle & hyprpaper & walker --gapplication-service & elephant & swayosd-server")
+  hl.exec_cmd("qs & waybar & hypridle & hyprpaper & walker --gapplication-service & elephant & swayosd-server")
 end)
 

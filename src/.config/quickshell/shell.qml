@@ -9,7 +9,6 @@ Scope {
 
   Pokemon {}
   Menu {}
-  Bar {}
 
   Timer {
     interval: 0
