@@ -106,3 +106,7 @@ hl.config({
     disable_hyprland_logo   = true,
   },
 })
+
+hl.on("hyprland.start", function ()
+  hl.exec_cmd('gsettings set org.gnome.desktop.interface color-scheme "prefer-dark"')
+end)
