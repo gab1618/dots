@@ -11,7 +11,7 @@ hl.config({
     sensitivity = 0, -- -1.0 - 1.0, 0 means no modification.
 
     touchpad = {
-      natural_scroll = false,
+      natural_scroll = true,
     },
   },
 })
@@ -19,7 +19,13 @@ hl.config({
 hl.gesture({
   fingers = 3,
   direction = "horizontal",
-  action = "workspace"
+  action = "workspace",
+})
+
+hl.gesture({
+  fingers = 2,
+  direction = "vertical",
+  action = "scroll_move",
 })
 
 -- Example per-device config
