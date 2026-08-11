@@ -26,8 +26,7 @@ window#waybar {
   min-width: 0;
   font-weight: 500;
   color: #313244;
-  padding-right: 0.2cm;
-  padding-left: 0.2cm;
+  padding: 0 12px;
   border-radius: 12px;
 }
 
