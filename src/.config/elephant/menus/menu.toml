@@ -16,7 +16,7 @@ actions = { "suspend" = "systemctl suspend" }
 [[entries]]
 icon = "󰿅"
 text = "Logout"
-actions = { "relaunch" = "hyprctl dispatch exit" }
+actions = { "relaunch" = "hyprctl dispatch 'hl.dsp.exit()'" }
 
 [[entries]]
 icon = "󰜉"
