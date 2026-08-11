@@ -8,11 +8,11 @@
     "hyprland/workspaces"
   ],
   "modules-center": [
-    "mpris"
+    "tray"
   ],
   "modules-right": [
+    "mpris",
     "pulseaudio",
-    "tray",
     "battery",
     "clock"
   ],
