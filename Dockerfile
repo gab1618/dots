@@ -1,9 +1,7 @@
 FROM archlinux
 
 RUN pacman -Syu --noconfirm && \
-  pacman -S zsh neovim tmux git jujutsu base-devel stow --noconfirm
-
-# For GUI packages: pacman -S sway swaybg waybar kitty grim slurp wl-clipboard hyprland hyprpaper
+  pacman -S zsh neovim tmux git jujutsu base-devel stow waybar kitty grim slurp wl-clipboard hyprland hyprpaper hyprlock hypridle --noconfirm
 
 # Configuring git
 RUN git config --global user.name "Gabriel C. Brandão" && \
