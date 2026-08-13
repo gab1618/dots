@@ -22,9 +22,9 @@ ENV ZSH=/root/.oh-my-zsh
 
 WORKDIR /root
 
-COPY . .
+COPY ./src .
 
-RUN cd src && stow . -t ~ --adopt
+RUN stow . -t ~ --adopt
 
 # Install oh-my-zsh
 RUN git clone https://github.com/ohmyzsh/ohmyzsh.git $ZSH
