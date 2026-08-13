@@ -22,9 +22,9 @@ ENV ZSH=/root/.oh-my-zsh
 
 WORKDIR /root
 
-COPY ./src/p10k.zsh ./.p10k.zsh
-COPY ./src/zshrc ./.zshrc
-COPY ./src/config ./.config
+COPY ./src/.p10k.zsh ./.p10k.zsh
+COPY ./src/.zshrc ./.zshrc
+COPY ./src/.config ./.config
 
 # Install oh-my-zsh
 RUN git clone https://github.com/ohmyzsh/ohmyzsh.git $ZSH
