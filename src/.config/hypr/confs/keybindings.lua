@@ -15,6 +15,8 @@ hl.bind(vars.main_mod .. " + h", hl.dsp.focus({ direction = "right" }))
 hl.bind(vars.main_mod .. " + k",    hl.dsp.focus({ direction = "up" }))
 hl.bind(vars.main_mod .. " + j",  hl.dsp.focus({ direction = "down" }))
 
+hl.bind(vars.main_mod .. " + S",  hl.dsp.exec_cmd("hyprshot -m region --raw | swappy -f -"))
+
 for i = 1, 10 do
   local key = i % 10 -- 10 maps to key 0
   hl.bind(vars.main_mod .. " + " .. key,             hl.dsp.focus({ workspace = i}))

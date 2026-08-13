@@ -1,17 +1,14 @@
 FROM archlinux
 
 RUN pacman -Syu --noconfirm && \
-  pacman -S zsh neovim tmux git jujutsu base-devel stow waybar kitty grim slurp wl-clipboard hyprland hyprpaper hyprlock hypridle --noconfirm
+  pacman -S zsh neovim tmux git base-devel stow waybar kitty hyprshot swappy hyprpaper hyprlock hypridle --noconfirm
 
 # Configuring git
 RUN git config --global user.name "Gabriel C. Brandão" && \
   git config --global user.email "biel.brandao2004@gmail.com" && \
   git config --global core.editor nvim && \
   git config --global rerere.enabled true && \
-  git config --global init.defaultbranch main && \
-  jj config set --user ui.editor nvim && \
-  jj config set --user user.name "Gabriel C. Brandão" && \
-  jj config set --user user.email "biel.brandao2004@gmail.com";
+  git config --global init.defaultbranch main;
 
 RUN chsh -s /bin/zsh
 ENV ZSH=/root/.oh-my-zsh

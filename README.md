@@ -2,7 +2,11 @@
 
 Feel free to copy them, just keep in mind it won't just work out of the box.
 
-Tip: use stow to install the dots
+Tip: use stow to install the dots:
+
+```
+stow -t ~ src
+```
 
 ## Dependencies
 
@@ -15,7 +19,7 @@ Tip: use stow to install the dots
 * Waybar
 * Walker + Elephant
 * Quickshell
-* Grim, slurp, wl-clipboard
+* hyprshot + swappy
 * Btop
 
 ## Screenshots
