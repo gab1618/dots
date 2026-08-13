@@ -8,7 +8,7 @@ RUN pacman -Syu --noconfirm && \
 # Run those commands to install yay and the used packages
 # RUN git clone https://aur.archlinux.org/yay.git && cd yay && makepkg -si
 
-# RUN yay -S walker elephant elephant-desktopapplications elephant-menus --noconfirm
+# RUN yay -S walker elephant elephant-desktopapplications elephant-menus elephant-providerlist elephant-unicode --noconfirm
 
 # Configuring git
 RUN git config --global user.name "Gabriel C. Brandão" && \
