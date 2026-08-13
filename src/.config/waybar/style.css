@@ -46,6 +46,14 @@ window#waybar {
   color: #fab387;
 }
 
+#custom-logo {
+  background-color: #11111b;
+  color: #8aadf4;
+  padding: 0 16px;
+  border-radius: 16px;
+  margin-left: 6px;
+}
+
 #mpris {
   color: #11111b;
   padding: 4px 8px;
@@ -123,5 +131,4 @@ window#waybar {
 #battery.urgent {
   color: #1d2021;
 }
-
 
