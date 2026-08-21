@@ -2,6 +2,7 @@
 
 import Quickshell
 import qs.services
+import qs.components.menus
 import QtQuick
 
 Scope {
@@ -9,6 +10,7 @@ Scope {
 
   Pokemon {}
   Menu {}
+  WallpaperPicker {}
 
   Timer {
     interval: 0

@@ -87,6 +87,6 @@
   },
   "custom/logo": {
     "format": "󰣇",
-    "on-click": "killall -SIGUSR1 waybar"
+    "on-click": "qs ipc call wallpaper toggle"
   }
 }

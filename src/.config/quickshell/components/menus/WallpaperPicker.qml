@@ -10,7 +10,7 @@ import Quickshell.Widgets
 import qs.config
 import qs.services
 
-PopupWindow {
+PanelWindow {
   id: picker
 
   readonly property var colsCount: 2
@@ -20,9 +20,10 @@ PopupWindow {
   readonly property var gridVSpacing: 20
   readonly property var contentPadding: 12
 
-  anchor.window: bar
-  anchor.rect.x: 4
-  anchor.rect.y: parentWindow.height
+  anchors {
+    top: true
+    left: true
+  }
 
   visible: false
 
@@ -30,6 +31,14 @@ PopupWindow {
   implicitHeight: 400
 
   color: "#00000000"
+
+  IpcHandler {
+    target: "wallpaper"
+
+    function toggle() {
+      visible = !visible
+    }
+  }
 
   FolderListModel {
     id: folderModel
