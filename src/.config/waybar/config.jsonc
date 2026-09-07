@@ -83,10 +83,12 @@
     "status-icons": {
       "paused": ""
     },
-    "max-length": 48
+    "max-length": 48,
+    "tooltip": false
   },
   "custom/logo": {
     "format": "󰣇",
-    "on-click": "qs ipc call wallpaper toggle"
+    "on-click": "qs ipc call wallpaper toggle",
+    "tooltip": false
   }
 }
