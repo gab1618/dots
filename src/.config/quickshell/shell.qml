@@ -10,7 +10,7 @@ Scope {
 
   Pokemon {}
   Menu {}
-  WallpaperPicker {}
+  Bar {}
 
   Timer {
     interval: 0

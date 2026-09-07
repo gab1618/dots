@@ -2,7 +2,7 @@ FROM archlinux
 
 # Installing all pacman packages
 RUN pacman -Syu --noconfirm && \
-  pacman -S zsh neovim tmux git base-devel stow waybar kitty hyprshot swappy hyprpaper hyprlock hypridle --noconfirm;
+  pacman -S zsh neovim tmux git base-devel stow kitty hyprshot swappy hyprpaper hyprlock hypridle --noconfirm;
 
 # TODO: actually install yay in this image
 # Run those commands to install yay and the used packages

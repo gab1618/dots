@@ -17,7 +17,7 @@ hl.bind(vars.main_mod .. " + j",  hl.dsp.focus({ direction = "down" }))
 
 hl.bind(vars.main_mod .. " + S",  hl.dsp.exec_cmd("hyprshot -m region --raw | swappy -f -"))
 
-hl.bind(vars.main_mod .. " + B",  hl.dsp.exec_cmd("killall -SIGUSR1 waybar"))
+hl.bind(vars.main_mod .. " + B",  hl.dsp.exec_cmd("qs ipc call bar toggle"))
 
 for i = 1, 10 do
   local key = i % 10 -- 10 maps to key 0

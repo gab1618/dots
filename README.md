@@ -16,7 +16,6 @@ stow -t ~ src
 * zsh + oh-my-zsh + powerlevel10k
 * Tmux + tpm
 * Hyprland, Hyprlock, Hypridle, Hyprpaper
-* Waybar
 * Walker + Elephant
 * Quickshell
 * hyprshot + swappy
