@@ -102,6 +102,7 @@
     zsh
     bitwarden-desktop
     stow
+    btop
   ];
 
   # Some programs need SUID wrappers, can be configured further or are
