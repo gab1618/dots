@@ -96,7 +96,7 @@
     wget
     git
     tmux
-    pkgs.ghostty
+    kitty
     inputs.zen-browser.packages.${pkgs.stdenv.hostPlatform.system}.default
     fastfetch
     zsh
