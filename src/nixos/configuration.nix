@@ -83,9 +83,6 @@
     ];
   };
 
-  # Install firefox.
-  programs.firefox.enable = true;
-
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
 
@@ -103,7 +100,12 @@
     bitwarden-desktop
     stow
     btop
+    pkgs.hyprland
+    pkgs.hyprlock
+    pkgs.quickshell
   ];
+  programs.hyprland.enable = true;
+  programs.hyprlock.enable = true;
 
   fonts.packages = with pkgs; [
     nerd-fonts.fira-code
