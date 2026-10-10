@@ -102,6 +102,7 @@
     btop
     pkgs.hyprland
     pkgs.hyprlock
+    pkgs.hyprpaper
     pkgs.quickshell
   ];
   programs.hyprland.enable = true;
