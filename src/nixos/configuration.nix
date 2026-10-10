@@ -104,6 +104,8 @@
     pkgs.hyprlock
     pkgs.hyprpaper
     pkgs.quickshell
+    pkgs.elephant
+    pkgs.walker
   ];
   programs.hyprland.enable = true;
   programs.hyprlock.enable = true;
