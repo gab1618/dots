@@ -75,5 +75,7 @@ PanelWindow {
     Sound {}
 
     Clock {}
+
+    Battery {}
   }
 }
