@@ -102,6 +102,8 @@
     btop
     pkgs.hyprland
     pkgs.hyprlock
+    pkgs.hyprshot
+    pkgs.swappy
     pkgs.hyprpaper
     pkgs.quickshell
     pkgs.elephant
