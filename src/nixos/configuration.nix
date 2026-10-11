@@ -76,7 +76,7 @@
   users.users."gabri" = {
     isNormalUser = true;
     description = "Gabriel Carvalho Brandão";
-    extraGroups = [ "networkmanager" "wheel" ];
+    extraGroups = [ "networkmanager" "wheel" "docker" ];
     useDefaultShell = true;
     packages = with pkgs; [
     #  thunderbird
@@ -112,6 +112,7 @@
     adwaita-icon-theme
     gnome-themes-extra
     gsettings-desktop-schemas
+    docker
   ];
   programs.hyprland.enable = true;
   programs.hyprlock.enable = true;
@@ -122,6 +123,10 @@
 
   environment.sessionVariables = {
     GTK_THEME = "Adwaita-dark";
+  };
+
+  virtualisation.docker = {
+    enable = true;
   };
 
   # Some programs need SUID wrappers, can be configured further or are
