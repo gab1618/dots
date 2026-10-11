@@ -113,9 +113,15 @@
     gnome-themes-extra
     gsettings-desktop-schemas
     docker
+    pkgs.qbittorrent
   ];
   programs.hyprland.enable = true;
   programs.hyprlock.enable = true;
+
+  programs.appimage = {
+    enable = true;
+    binfmt = true;
+  };
 
   fonts.packages = with pkgs; [
     nerd-fonts.fira-code
