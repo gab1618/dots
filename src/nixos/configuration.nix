@@ -106,6 +106,10 @@
     pkgs.quickshell
     pkgs.elephant
     pkgs.walker
+    xdg-utils
+    adwaita-icon-theme
+    gnome-themes-extra
+    gsettings-desktop-schemas
   ];
   programs.hyprland.enable = true;
   programs.hyprlock.enable = true;
@@ -113,6 +117,10 @@
   fonts.packages = with pkgs; [
     nerd-fonts.fira-code
   ];
+
+  environment.sessionVariables = {
+    GTK_THEME = "Adwaita-dark";
+  };
 
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.
