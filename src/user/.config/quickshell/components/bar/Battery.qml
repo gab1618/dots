@@ -20,10 +20,10 @@ Rectangle {
 
   function getBatteryColor() {
     if(powerPercentage < 0.3) {
-      return theme.red
+      return Theme.red
     }
     if(powerPercentage < 0.7) {
-      return theme.yellow
+      return Theme.yellow
     }
     return Theme.green
   }
