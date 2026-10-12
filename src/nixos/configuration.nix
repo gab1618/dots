@@ -100,14 +100,14 @@
     bitwarden-desktop
     stow
     btop
-    pkgs.hyprland
-    pkgs.hyprlock
-    pkgs.hyprshot
-    pkgs.swappy
-    pkgs.hyprpaper
-    pkgs.quickshell
-    pkgs.elephant
-    pkgs.walker
+    hyprland
+    hyprlock
+    hyprshot
+    swappy
+    hyprpaper
+    quickshell
+    elephant
+    walker
     xdg-utils
     adwaita-icon-theme
     gnome-themes-extra
@@ -120,6 +120,7 @@
     unzip
     ripgrep
     rustup
+    anki
   ];
   programs.hyprland.enable = true;
   programs.hyprlock.enable = true;
