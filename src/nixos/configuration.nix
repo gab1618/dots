@@ -119,6 +119,7 @@
     gcc
     unzip
     ripgrep
+    rustup
   ];
   programs.hyprland.enable = true;
   programs.hyprlock.enable = true;
