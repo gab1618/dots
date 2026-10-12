@@ -114,6 +114,10 @@
     gsettings-desktop-schemas
     docker
     pkgs.qbittorrent
+    asdf-vm
+    gnumake
+    gcc
+    unzip
   ];
   programs.hyprland.enable = true;
   programs.hyprlock.enable = true;
