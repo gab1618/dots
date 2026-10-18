@@ -120,6 +120,7 @@
     unzip
     ripgrep
     rustup
+    rust-analyzer
     anki
   ];
   programs.hyprland.enable = true;

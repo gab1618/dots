@@ -1,4 +1,4 @@
-local servers = { "lua_ls", "html", "cssls", "rust_analyser", "ts_ls", "svelte", "elixirls", "astro", "texlab", "gopls" }
+local servers = { "lua_ls", "html", "cssls", "rust_analyzer", "ts_ls", "svelte", "elixirls", "astro", "texlab", "gopls" }
 vim.lsp.enable(servers)
 
 local capabilities = require('blink.cmp').get_lsp_capabilities()
